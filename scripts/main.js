@@ -165,7 +165,7 @@ function initScrollAnimations() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.timeline-item, .skill-category, .highlight-item, .contact-card');
+    const animatedElements = document.querySelectorAll('.timeline-item, .skills-panel, .tech-stack-panel, .highlight-item, .contact-card');
     animatedElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
@@ -399,9 +399,9 @@ function trackPerformance() {
 // Theme Management
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    // First-time visitors should always see the light theme.
+    const theme = savedTheme || 'light';
     document.documentElement.setAttribute('data-theme', theme);
     
     // Update theme toggle icon
