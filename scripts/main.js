@@ -165,7 +165,7 @@ function initScrollAnimations() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.timeline-item, .skills-panel, .tech-stack-panel, .highlight-item, .contact-card');
+    const animatedElements = document.querySelectorAll('.timeline-item, .skills-panel, .tech-stack-panel, .certification-card, .highlight-item, .contact-card');
     animatedElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
