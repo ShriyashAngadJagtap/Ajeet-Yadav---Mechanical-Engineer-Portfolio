@@ -222,29 +222,6 @@ function updateActiveNavLink() {
 // Initialize active nav link highlighting
 updateActiveNavLink();
 
-// Utility function to handle download resume
-function downloadResume() {
-    // This function will be triggered when the download resume button is clicked
-    // The actual PDF file should be placed in the assets folder
-    const link = document.createElement('a');
-    link.href = 'assets/resume.pdf';
-    link.download = 'Ajeet_Yadav_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-// Add click tracking for resume download
-document.addEventListener('DOMContentLoaded', function() {
-    const resumeBtn = document.querySelector('a[href="assets/resume.pdf"]');
-    if (resumeBtn) {
-        resumeBtn.addEventListener('click', function(e) {
-            // Track download event (you can add analytics here)
-            console.log('Resume download initiated');
-        });
-    }
-});
-
 // Form validation helpers
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

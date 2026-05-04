@@ -819,6 +819,16 @@ body {
     border-color: #e4405f;
 }
 
+.social-link.github {
+    color: #24292f;
+}
+
+.social-link.github:hover {
+    background-color: #24292f;
+    color: white;
+    border-color: #24292f;
+}
+
 .social-link.twitter {
     color: #1da1f2;
 }
@@ -837,6 +847,16 @@ body {
     background-color: #1877f2;
     color: white;
     border-color: #1877f2;
+}
+
+.social-link.website {
+    color: var(--primary-color);
+}
+
+.social-link.website:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }
 
 /* Contact Section */
